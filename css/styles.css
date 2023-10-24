@@ -545,7 +545,7 @@ p{
 
 
 
-        /* Modal window*/
+         /* ======== MODAL WINDOW ======== */
 
 .backdrop{
     position: fixed;
@@ -560,15 +560,15 @@ p{
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal{
-    width: 408px;
-    min-height: 584px;
+    width: 288px;
+    min-height: 623px;
     background-color: var(--dairy);
     border-radius: 4px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px 16px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -617,6 +617,9 @@ p{
 }
 .modal-form{
     align-items: center;
+}
+.modal-accept{
+    width: 232px;
 }
 .modal-title{
     font-weight: 500;
@@ -704,7 +707,7 @@ p{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     border: none;
     color: var(--white);
-    margin-left: 95px;
+    margin-left: 43px;
     position: absolute;
     bottom: 24px;
 }
@@ -712,16 +715,17 @@ p{
     color: var(--lightslate);
     font-size: 12px;
     font-weight: 400;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.48px;
     align-items: center;
-    line-height: 1.17;
-    display: block;
+    line-height: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: last baseline;
 }
 .privacy-policy{
     color: var(--iris);
     text-decoration: underline;
     line-height: 16px;
-    padding-left: 3px;
 }
 .modal-field-last .check-text .footer-label-checkbox{
     display: inline-flex;
@@ -813,6 +817,21 @@ p{
     .footer-div-social{
         display: block;
     }
+    .modal{
+        width: 408px;
+        min-height: 584px;
+        padding: 72px 25px 24px 23px;
+    }
+    .privacy-policy{
+        padding-left: 3px;
+    }
+    .modal-accept{
+        width: auto;
+    }
+    .modal-btn-send{
+        margin-left: 95px;
+    }
+
 }
 @media screen and (min-width: 1158px) {
     .container{
@@ -898,5 +917,8 @@ p{
     }
     .footer-input{
         opacity: 1;
+    }
+    .modal{
+        padding: 72px 24px 24px 24px;
     }
 }
