@@ -129,6 +129,9 @@ ul{
 }
 img{
     display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 a{
     text-decoration: none;
@@ -220,7 +223,7 @@ p{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--slate);
+    color: var(--navyblue);
     font-weight: 500;
 }
 
@@ -263,7 +266,7 @@ p{
     margin-bottom: 72px;
 }
 
-       /* ======TEAM STYLES====== */
+       /* ======== TEAM STYLES ======== */
 
 .team{
     background-color: var(--cloud);
@@ -303,6 +306,7 @@ p{
     text-align: center;
     margin-bottom: 8px;
     font-weight: 400;
+    color: var(--slate);
 }
 .team-icons-list{
     display: flex;
@@ -331,22 +335,73 @@ p{
     fill: var(--cloud);
 }
 
-        /* Customers */
+        /* ======== PORTFOLIO ======== */
 
-.customers-li{
+.btn-portfolio{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--iris);
+    background-color: var(--cloud);
+    cursor: pointer;
+    padding: 12px 24px;
+    border: 1px solid var(--cornflower);
+    border-radius: 4px;
+}
+.btn-portfolio:hover,
+.btn-portfolio:focus{
+    color: var(--white);
+    background-color: var(--ocean);
+    border: 1px solid transparent;
+}
+.portfolio-section{
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+.portfolio-ul-btn{
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 72px;
+}
+.portfolio-ul-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+}
+.portfolio-li-cards{
+   width: 100%;
+}
+.portfolio-apps .team-names{
+    text-align: left;
+}
+.portfolio-apps .team-text{
+    text-align: left;
+}
+.portfolio-apps{
+    padding: 32px 16px;
+    border: 1px solid var(--cornflower);
+    border-top: none;
+}
+.portfolio-apps-header{
+    margin-bottom: 8px;
+}
+.portfolio-li{
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customers-li:hover{
+.portfolio-li:hover{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.customers-li:hover .customers-p{
+.portfolio-li:hover .portfolio-p{
     transform: translateY(0%);
 }
-.customers-div{
+.portfolio-div{
     position: relative;
     overflow: hidden;
 }
-.customers-p{
+.portfolio-p{
     position: absolute;
     top:0;
     font-size: 16px;
@@ -361,15 +416,22 @@ p{
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-        /* Footer */
+        /* ======== FOOTER ======== */
 
 .footer{
     background-color: var(--navyblue);
-    padding: 100px 0;
+    padding: 96px 0;
 }
 .footer-div{
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+
+}
+.footer-div-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .footer-logo{
     display: inline-block;
@@ -383,13 +445,23 @@ p{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--cloud);
-    max-width: 264px;
+    font-weight: 400;
+    
 }
 .footer-div-logo{
-    margin-right: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 72px;
 }
 .footer-div-social{
     margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 72px;
 }
 .footer-p-social{
     font-weight: 500;
@@ -428,10 +500,13 @@ p{
 
 .footer-form{
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
 }
 .footer-input{
-    width: 264px;
+    width: 288px;
+    opacity: 0.6;
     height: 40px;
     border-radius: 4px;
     border: 1px solid var(--white);
@@ -467,6 +542,8 @@ p{
     margin-left: 16px;
     
 }
+
+
 
         /* Modal window*/
 
@@ -673,55 +750,7 @@ p{
     pointer-events: auto;
 }
 
-        /* Portfolio */
 
-.btn-portfolio{
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    color: var(--iris);
-    background-color: var(--cloud);
-    cursor: pointer;
-    padding: 12px 24px;
-    border: 1px solid var(--cornflower);
-    border-radius: 4px;
-}
-.btn-portfolio:hover,
-.btn-portfolio:focus{
-    color: var(--white);
-    background-color: var(--ocean);
-    border: 1px solid transparent;
-}
-.portfolio-section{
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-.portfolio-ul-btn{
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    margin-bottom: 72px;
-}
-.portfolio-ul-cards{
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
-}
-.portfolio-li-cards{
-    width: calc((100% - 48px) / 3);
-    
-}
-.portfolio-apps{
-    padding: 32px 16px;
-    border: 1px solid var(--cornflower);
-    border-top: none;
-}
-.portfolio-apps-header{
-    margin-bottom: 8px;
-}
 @media screen and (min-width: 320px) {
  
     
@@ -749,6 +778,41 @@ p{
         max-width: 768px;
         padding-left: 108px;
         padding-right: 108px;
+    }
+
+    .portfolio-li-cards{
+        width: calc((100% - 24px) / 2);
+    }
+    .portfolio-ul-cards{
+        gap: 72px 24px;
+    }
+
+    .footer .container{
+        padding-left: 108px;
+        padding-right: 108px;
+    }
+    .footer-form{
+        gap: 24px;
+    }
+    .footer-div-form{
+        display: block;
+    }
+    .footer-div-special{
+        display: flex;
+        gap: 24px;
+    }
+    .footer-div-logo{
+        display: block;
+    }
+    .footer-text{
+        width: 264px;
+    }
+    .footer-input{
+        width: 264px;
+    }
+    .footer-div-social{
+        display: block;
+    }
 }
 @media screen and (min-width: 1158px) {
     .container{
@@ -795,5 +859,44 @@ p{
     }
     .team-names{
         font-weight: 500;
+    }
+
+    .portfolio-section{
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    .portfolio-li-cards{
+        width: calc((100% - 48px) / 3);
+    }
+    .portfolio-ul-cards{
+        gap: 48px 24px;
+    }
+
+
+
+    .footer{
+        padding: 96px 0;
+    }
+    .footer-div{
+        display: flex;
+        align-items: baseline;
+    }
+    .footer .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .footer-div-logo{
+        margin-right: 120px;
+        margin-bottom: 0;
+    }
+    .footer-div-special{
+        margin-right: 80px;
+        gap: 0;
+    }
+    .footer-div-social{
+        margin-bottom: 0;
+    }
+    .footer-input{
+        opacity: 1;
     }
 }
