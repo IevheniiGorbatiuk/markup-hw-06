@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
-    <!--
+    
     <header class="header">
         <div class="container-header container">
             <nav class="nav">
@@ -42,10 +42,10 @@
             </address>
          </div>
     </header>
--->
+
     <main>
      <!--Hero image-->
-     <!--
+     
 <section class="hero">
     <div class="container ">
         <h1 class="mhead">Effective Solutions
@@ -54,7 +54,7 @@
         <button type="button" class="btnservice">Order Service</button>
     </div>  
 </section>
--->
+
      <!--Features-->
      
 <section class="features">
@@ -268,7 +268,18 @@
         <ul class="list portfolio-ul-cards">
             <li class="portfolio-li-cards portfolio-li">
                     <div class="portfolio-div">
-                        <img src="./images/projectcard1.jpg" alt="Banking App" width="360" height="300">
+                        <picture>
+                            <source srcset="./images/projectcard1.jpeg 1x, projectcard1-2x.jpeg 2x" 
+                            media="(min-width: 1158px)"
+                            />
+                            <source srcset="./images/projectcard1-tab.jpeg 1x, projectcard1-tab-2x.jpeg 2x" 
+                            media="(min-width: 768px)"
+                            />
+                            <source srcset="./images/projectcard1-mob.jpeg 1x, projectcard1-mob-2x.jpeg 2x" 
+                            media="(max-width: 768px)"
+                            />
+                            <img src="./images/projectcard1.jpeg" alt="Banking App" width="360" height="300">
+                        </picture>
                         <p class="portfolio-p">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
                     </div>
                     <div class="portfolio-apps">
@@ -393,7 +404,7 @@
     </footer>
 
     <!-- Modal window -->
-    <div class="backdrop is-open">
+    <div class="backdrop">
         <div class="modal">
                 <button type="button" class="modal-btn">
                     <svg class="modal-btn-icon" width="8" height="8">
